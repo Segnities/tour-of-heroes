@@ -1,13 +1,6 @@
 <h2>My heroes</h2>
 
-<div *ngIf="selectedHero">
-   <h2>{{selectedHero.name | uppercase}} Details</h2>
-   <p>id: {{selectedHero.id}}</p>
-   <div>
-      <label for="hero-name">Hero name:</label>
-      <input type="text" id="hero-name" [(ngModel)]="selectedHero.name" placeholder="Hero name" required />
-   </div>
-</div>
+<app-hero-details [hero]="selectedHero"></app-hero-details>
 
 <ul class="heroes">
    <li *ngFor="let hero of heroes">
